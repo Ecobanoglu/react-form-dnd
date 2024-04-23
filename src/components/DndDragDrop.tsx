@@ -47,7 +47,7 @@ export default function DndDragDrop({
                     draggableId={`draggable-id-${item.id.toString()}`}
                     index={index}
                   >
-                    {(provided, snapshot) => {
+                    {(provided) => {
                       return (
                         <div
                           id={item.id.toLocaleString()}
