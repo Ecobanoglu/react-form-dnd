@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# React Drag Drop Form 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed as an example for the development of another project. 
 
-Currently, two official plugins are available:
+This project can be useful for creating automated items, survey module with react-hook-form. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stacks
+- React (with Vite)
+- Typescript
+- React Hook Form
+- React Beautiful DND
+- Radix UI
+- Tailwind CSS
+- ZOD
 
-## Expanding the ESLint configuration
+![Drag Drop Form](https://lh3.googleusercontent.com/pw/AP1GczMWDrwP1fNVPnnZyJ8O48Xgza9Gb9IxX3qiPXrVDHFMT1BGkM4oLiT8tyPyz-tbrk5HM6FTgEt59rvm42T2tcbC8NvGtFnt3ZMyGa_RM9tc04i4TCn4ovczKJQaK_BGNTlSm2ZgpjsHtyw4debKO5urWysOBJHXzUTV-btcujpkUMFiJ6LkTSyVBiBR95mrg-H8CQ_sz9aM0uBaOnP8UDYJdWpEkQYFuGJoHPlc6TW9m_2Vxj-TCIHe8GJ9Wt632JibCcQuzr1mWgtKnSB6_8KU6QGtxF5wR-4EntlxuUGDiPwzC4DxHV5EACraTKr8okBzRpfxbTCxoHKjRVBt1QOeVBfjVk3uwNQRnaZdANukixoBbSxm8rYPo6A6hkEbkURGbN3FgLMxA0Ubmx8iJIvvGJn3-frUoAUm7oGYwa4dyQtW-PRKHFs5JUi_qsVtJfAXnFlLr1EzhEmLiIacq_EaNIdkLWblonvZVkbM7QNOZkCnGpLYDqZ73T6h3lK_BQKAAMXotdtaYi1p1pGZgdpgST3ioVaHrszhmyzmNg1aDK02iONCzIB7EQ3y7dS7XliLxyIZaGJIj8rMuZMKCsBMGFVWUO08bI4ETEO088gGdhn1hjeQ3pi3lMvTnh7vNbUB4mR-VUvxfVkjmF63Gh7kst_N8eSVgAF-Gow7jbE-ka4DChtvayja2Ql4PsL9vHVtPEsxqlOYZjDUd7lkMBguR87fHK49E-5HO54ygWncRB6m6RmwD7CwNdNgRENGtv3owpkXg8PuOx_X9pr2TgLJ6VbjiNZQjXrbs1zhxbmG9t-Gg8SiqZnCI3yoUIElUcJBSEbF1CKeo8ByhL673gyo9DbmLhfQ-ICObsvY8cVc-ucLB4-tjCn7d_cZKzQgePcvLPB_Jz-RjZnXBEXV2UY3=w898-h438-s-no-gm?authuser=0)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Form Results](https://lh3.googleusercontent.com/pw/AP1GczPQc0VCFTHwFncngHt-sZdLkLwTegOOqRLqbdIxMGBuUXSOW75k6vDzU1-XZzVwMjDpgY9aIHC9ErKn49wkBvmC4BZ3TQqiCE4O4fhoyLXVsSQj9MdhPMTGB4NinGzRCIJsW_ZB6KWfNspx7nZ4wGbNpKskE0nzAMKWdmufzqvl1IpPllCasjkCrhy-0tj_NBEkfSu0XbTRt_FBkKMj4d2gk96fqe-q-4COZzPyBVdG8AsAlzejP8SxvxC4b8PFDL-siuUuCRjUA02_tzXxd13n1Ld31C1FxZI2PUrsNR8_gAUI4NlLzAiU7lmKVDY-uwJ4Oj00fPOb6Zvl-YKAyUS78J9EFTHnpoivqelU2l5r7Y6e2EfkLe2veah-EtU7uLoYyTA05wFqYMdXk7xpeZktfNLCKFTlTpCAuywMCFdL644BeQsuUgQOr0epdLZ6gEadpJ1C_JEo2so1rD-JDKIe4k3vb6-MJekEZ5OY8BFmYz-lRr1xG_9q3rygmzn-3MofRkreCvokmfPwARQPB3m7a8maSZdORZCaW-MbqvN3xCIYi-dGmhNoVgW_6iZsZ6Sc67A_qS3R0g249H018HJ1WMSL4HZgSG_oIr3HHctSlvJf5LUDNtzDACHaiAY2mhqZ7LwgJhyMdoph_BhgAOqowC2d5tnPKW1DWZVREt2NdXtzGHqPLc7sShl1x36p_bHKgt1Ri2ZLgTD_TilMMn6VfARH1DMDIYLFjikXSvug8f3LwPh8NZZyDenqwc7U8b2zmMxEIWV0OYPm0yzGUIBXROZsq9oLZ3dW9ldvIk2MDEu2on8RVOqDrxaDruH1i4YgOW6oFoIggYizEe4UENz_7pwgq_RXzBUzjGr3IQ8DNwbjN-hYWF2XoGb1F_2d9lg1Y0yGh08atsdrxq6j4kS0=w895-h533-s-no-gm?authuser=0)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
