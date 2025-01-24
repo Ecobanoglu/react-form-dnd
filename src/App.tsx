@@ -4,47 +4,14 @@ import "./App.css";
 
 import DndForm from "./components/DndForm";
 import DndResult from "./components/DndResult";
-import { IData, IOption } from "src/lib/types";
-
-/**
-    @description: All Questions 
-  */
-const MY_DATA: IData[] = [
-  {
-    id: 0,
-    title: "Question 0",
-    options: [
-      {
-        id: 0,
-        text: "Answer 01",
-      },
-      {
-        id: 1,
-        text: "Answer 02",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Question 1",
-    options: [
-      {
-        id: 0,
-        text: "Answer 11",
-      },
-      {
-        id: 1,
-        text: "Answer 12",
-      },
-    ],
-  },
-];
+import { IData, IOption } from "@/lib/types";
+import { allData } from "@/lib/data";
 
 function App() {
   /**
     @description  All Questions 
   */
-  const [data, setData] = useState<IData[]>(MY_DATA);
+  const [data, setData] = useState<IData[]>(allData);
 
   /**
     @description Selected question
@@ -62,7 +29,6 @@ function App() {
         if (item.id == questionID) {
           item.options.push(answer);
         }
-
         return item;
       });
       setData(currentData);
