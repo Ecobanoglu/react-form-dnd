@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect } from "react";
 
-import { Button } from "@/components/ui";
+import { Button } from "src/components/ui";
 
-import DndDragDrop from "@/components/DndDragDrop";
+import DndDragDrop from "./DndDragDrop";
 
 import {
   Form,
@@ -10,7 +10,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/components/ui/form";
+} from "src/components/ui/form";
 
 import {
   Select,
@@ -19,9 +19,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "src/components/ui/select";
 
-import { IData, IForm, IOption } from "@/lib/types";
+import { IData, IForm, IOption } from "src/lib/types";
 
 import * as z from "zod";
 import { useForm, useFieldArray } from "react-hook-form";
@@ -206,75 +206,80 @@ export default function DndForm({
   }, [selectedData]);
 
   return (
-    <div className="text-center">
-      <Form {...form}>
-        <form
-          className="grid grid-cols-1 gap-4 md:gap-4 text-left"
-          onSubmit={form.handleSubmit(onSubmit)}
-        >
-          <div>
-            <FormField
-              control={form.control}
-              name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Questions</FormLabel>
-                  <Select
-                    onValueChange={(val: string) => {
-                      field.onChange(val);
-
-                      handleSetOptionsById(val);
-                    }}
-                    defaultValue={selectedData.title}
-                  >
-                    <FormControl>
-                      <SelectTrigger defaultChecked>
-                        <SelectValue placeholder="Soru Seçiniz" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectGroup>
-                        {allData &&
-                          allData.map(({ title }: any, k: number) => (
-                            <SelectItem
-                              defaultChecked={
-                                title == selectedData.title ? true : false
-                              }
-                              key={`selectitem-${k}`}
-                              value={title}
-                            >
-                              {title}
-                            </SelectItem>
-                          ))}
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <DndDragDrop
-            options={fields}
-            form={form}
-            handleUpdateText={handleUpdateText}
-            handleDragEnd={handleUpdateDrag}
-            handleRemoveItem={handleRemoveItem}
-          />
-          <Button
-            type="button"
-            variant="gray"
-            onClick={(evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-              evt.preventDefault();
-              createAnswerandAppendAnswer();
-            }}
+    <div>
+      <h1 className="text-xl font-bold text-left mb-3">React Dnd Form</h1>
+      <div className="text-center border p-3 lg:p-6 rounded-lg">
+        <Form {...form}>
+          <form
+            className="grid grid-cols-1 gap-4 md:gap-4 text-left"
+            onSubmit={form.handleSubmit(onSubmit)}
           >
-            Add More
-          </Button>
+            <div>
+              <FormField
+                control={form.control}
+                name="title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Questions</FormLabel>
+                    <Select
+                      onValueChange={(val: string) => {
+                        field.onChange(val);
 
-          <Button type="submit">Save</Button>
-        </form>
-      </Form>
+                        handleSetOptionsById(val);
+                      }}
+                      defaultValue={selectedData.title}
+                    >
+                      <FormControl>
+                        <SelectTrigger defaultChecked>
+                          <SelectValue placeholder="Soru Seçiniz" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectGroup>
+                          {allData &&
+                            allData.map(({ title }: any, k: number) => (
+                              <SelectItem
+                                defaultChecked={
+                                  title == selectedData.title ? true : false
+                                }
+                                key={`selectitem-${k}`}
+                                value={title}
+                              >
+                                {title}
+                              </SelectItem>
+                            ))}
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <DndDragDrop
+              options={fields}
+              form={form}
+              handleUpdateText={handleUpdateText}
+              handleDragEnd={handleUpdateDrag}
+              handleRemoveItem={handleRemoveItem}
+            />
+            <Button
+              type="button"
+              variant="gray"
+              onClick={(
+                evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
+              ) => {
+                evt.preventDefault();
+                createAnswerandAppendAnswer();
+              }}
+            >
+              Add More
+            </Button>
+
+            <Button type="submit">Save</Button>
+          </form>
+        </Form>
+      </div>
     </div>
   );
 }

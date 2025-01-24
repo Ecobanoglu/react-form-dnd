@@ -4,8 +4,8 @@ import "./App.css";
 
 import DndForm from "./components/DndForm";
 import DndResult from "./components/DndResult";
-import { IData, IOption } from "@/lib/types";
-import { allData } from "@/lib/data";
+import { IData, IOption } from "src/lib/types";
+import { allData } from "src/lib/data";
 
 function App() {
   /**
