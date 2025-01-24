@@ -1,4 +1,4 @@
-import { IData, IOption } from "src/lib/types";
+import { IData, IOption } from "@/lib/types";
 
 interface IDndResult {
   data: IData[];

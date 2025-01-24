@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect } from "react";
 
-import { Button } from "src/components/ui";
+import { Button } from "@/components/ui";
 
-import DndDragDrop from "./DndDragDrop";
+import DndDragDrop from "@/components/DndDragDrop";
 
 import {
   Form,
@@ -10,7 +10,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "src/components/ui/form";
+} from "@/components/ui/form";
 
 import {
   Select,
@@ -19,9 +19,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "src/components/ui/select";
+} from "@/components/ui/select";
 
-import { IData, IForm, IOption } from "src/lib/types";
+import { IData, IForm, IOption } from "@/lib/types";
 
 import * as z from "zod";
 import { useForm, useFieldArray } from "react-hook-form";

@@ -1,15 +1,15 @@
 import React from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { Input, Button } from "src/components/ui";
+import { Input, Button } from "@/components/ui";
 
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-} from "src/components/ui/form";
+} from "@/components/ui/form";
 
-import { IOption } from "src/lib/types";
+import { IOption } from "@/lib/types";
 
 interface IDndItem {}
 
